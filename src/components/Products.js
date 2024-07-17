@@ -56,7 +56,7 @@ const Products = () => {
                 const finalFormData = {
                     ...formData,
                     Commentary:`Email: ${formData.Email} - Phone: ${formData.Phone} - Message: ${formData.Commentary}`,
-                    LeadName: `Need for our products / - ${formData.LeadName}`, // Adding a constant prefix
+                    LeadName: `Need for our products / ${formData.LeadName}`, // Adding a constant prefix
                   };
                 setStep(step + 1);
                 // Using fetch
