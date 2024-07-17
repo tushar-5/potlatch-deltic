@@ -56,7 +56,7 @@ const Products = () => {
                 const finalFormData = {
                     ...formData,
                     Commentary:`Email: ${formData.Email} - Phone: ${formData.Phone} - Message: ${formData.Commentary}`,
-                    LeadName: `Need for our products/ - ${formData.LeadName}`, // Adding a constant prefix
+                    LeadName: `Need for our products / - ${formData.LeadName}`, // Adding a constant prefix
                   };
                 setStep(step + 1);
                 // Using fetch
@@ -79,11 +79,11 @@ const Products = () => {
     };
 
     return (
-        <div class="container-fluid form-container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-8 text-center p-0 mb-2">
-                    <div class="card px-0">
-                        <img class="my-4" src={logo} style={{ maxWidth: "220px", margin: "0 auto" }} alt='logo' />
+        <div className="container-fluid form-container">
+            <div className="row justify-content-center">
+                <div className="col-12 col-sm-8 text-center p-0 mb-2">
+                    <div className="card px-0">
+                        <img className="my-4" src={logo} style={{ maxWidth: "220px", margin: "0 auto" }} alt='logo' />
                         {step !== 2 && (
                             <h2 id="heading">Explore our timberlands.</h2>
                         )}
@@ -91,22 +91,22 @@ const Products = () => {
                             <br />
                             {step === 1 && (
                                 <div>
-                                    <div class="form-card">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <h2 class="fs-title">I'm interested in your product!</h2>
+                                    <div className="form-card">
+                                        <div className="row">
+                                            <div className="col-7">
+                                                <h2 className="fs-title">I'm interested in your product!</h2>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="first-left col-md-6">
-                                                <label class="fieldlabels">Name: *</label>
+                                        <div className="row">
+                                            <div className="first-left col-md-6">
+                                                <label className="fieldlabels">Name: *</label>
                                                 <input type="text" name="LeadName"
                                                     placeholder="Name"
                                                     value={formData.LeadName}
                                                     onChange={inputHandle}
                                                     required /><p style={{ color: 'red' }}>{errors.LeadName}</p>
                                                     
-                                                    <label class="fieldlabels" for="state">Product: *</label>
+                                                    <label className="fieldlabels" for="state">Product: *</label>
                                                 <select
                                                     type="text"
                                                     name="ProductSuggestions"
@@ -119,7 +119,7 @@ const Products = () => {
                                                     <option value="Southern Lumber">Southern Lumber</option>
                                                 </select>{errors.ProductSuggestions && <p style={{ color: 'red' }}>{errors.ProductSuggestions}</p>}
 
-                                                <label class="fieldlabels">Email: *</label>
+                                                <label className="fieldlabels">Email: *</label>
                                                 <input
                                                     type="email"
                                                     name="Email"
@@ -129,7 +129,7 @@ const Products = () => {
                                                     required
                                                 /><p style={{ color: 'red' }}>{errors.Email}</p>
 
-                                                <label class="fieldlabels">Phone Number: *</label>
+                                                <label className="fieldlabels">Phone Number: *</label>
                                                 <input
                                                     type="text"
                                                     name="Phone"
@@ -139,7 +139,7 @@ const Products = () => {
                                                     required
                                                 /><p style={{ color: 'red' }}>{errors.Phone}</p>
                                                 
-                                                <label class="fieldlabels">Message: *</label>
+                                                <label className="fieldlabels">Message: *</label>
                                                 <input
                                                     type="text"
                                                     name="Commentary"
@@ -150,14 +150,14 @@ const Products = () => {
                                                 /><p style={{ color: 'red' }}>{errors.Commentary}</p>
                                             </div>
                                         </div>
-                                    </div><button class="purple-action-button-centre" type="submit">Submit</button>
+                                    </div><button className="action-button" type="submit">Submit</button>
                                     {serverResponse && <div className="server-response">{JSON.stringify(serverResponse)}</div>}
                                 </div>
                             )}
                             {step === 2 && (
-                                <div class="form-card">
+                                <div className="form-card">
                                     <br /><br />
-                                    <h5 id="purple-button">
+                                    <h5 id="purple-text text-center">
                                     Thank you for being our valued customer, We hope our product will meet your expectations. Thank you for choosing our product.
                                     </h5>
                                 </div>
