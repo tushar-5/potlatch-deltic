@@ -22,7 +22,7 @@ const Products = () => {
         Commentary: "",
         Email: "",
         ProductSuggestions: "",
-        Source : "f5e73b24-bd68-45ba-9ec6-dee40a35c615",
+        SalesChannel : "0ffb1434-91db-4ba8-b6ad-69a87c44557c",
         EntityName: "Lead",
     });
 
